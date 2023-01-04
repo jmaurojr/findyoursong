@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<input id="pesquisa">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<ul id="lista"></ul>
 
+<script>
+    songs = ["2112", "A Farewell to Kings", "A Passage To Bangkok", "Afterimage", "Anagram", "Analog Kid", "Animate", "Anthem", "Armor and Sword", "Available Light", "Beneath, Between and Behind", "Best I Can", "Between Sun And Moon", "Between The Wheels", "Bravado", "Bravest Face", "Broon's Bane", "BUB", "BUB2", "By-Tor And The Snow Dog", "Caravan", "Carnies", "Carve Away The Stone", "Ceiling Unlimited", "Chain Lightning", "Chemistry", "Cinderella Man", "Circumstances", "Clockwork Angels", "Closer To The Heart", "Cold Fire", "Color Of Right", "Countdown", "Cut To The Chase", "Cygnus X-1", "Cygnus X-1 Book 2: Hemispheres", "Der Trommler", "Different Strings", "Distant Early Warning", "Dog Years", "Double Agent", "Earthshine", "Emotion Detector", "Entre Nous", "Everyday Glory", "Far Cry", "Fly By Night", "Force Ten", "Fountain of Lamneth", "Freewill", "Freeze", "Ghost Of A Chance", "Ghost Rider", "Grand Designs", "Halo Effect", "Headlong Flight", "Heresy", "HighWater", "Hope", "I Think I'm Going Bald", "In The End", "In The Mood", "Jacob's Ladder", "La Villa Strangiato", "Lakeside Park", "Lessons", "Limbo", "Limelight", "Lock And Key", "Losing It", "Making Memories", "Malignant Narcissism", "Manhattan Project", "Marathon", "Middletown Dreams", "Mission", "Natural Science", "New World Man", "Nobody's Hero", "Nocturne", "One Little Victory", "Open Secrets", "Out Of The Cradle", "Peaceable Kingdom", "Prime Mover", "Red Barchetta", "Red Sector A", "Red Tide", "Resist", "Rivendell", "Roll The Bones", "Scars", "Second Nature", "Seven Cities Of Gold", "Show Don't Tell", "Something For Nothing", "Speed Of Love", "Stick It Out", "Subdivisions", "Sweet Miracle", "Tai' Shan", "Territories", "Test For echo", "The Anarchist", "The Big Money", "The Big Wheel", "The Body Electric", "The Camera Eye", "The Enemy Within", "The Garden", "The Larger Bowl", "The Main Monkey Business", "The Necromancer", "The Pass", "The Spirit Of Radio", "The Stars Look Down", "The Trees", "The Twilight Zone", "The Weapon", "The Wreckers", "Time Stand Still", "Tom Sawyer", "Turn The Page", "Vapor Trail", "Virtuality", "Vital Signs", "We Hold On", "Where's My Thing", "Wish Them Well", "Witch Hunt", "Workin' Them Angels", "Working Man", "Xanadu", "You Bet Your Life", "YYZ"]
 
-</head>
-<body>
-    <main>
-        <div class="divSearch">
-            <label for="search">Buscar música</label>
-            <input type="search" />
-        </div>
-        <div class="content">
-            
-        </div>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+    t = ""
+
+    for(i in songs){
+        t += "<li>"+songs[i]+"</li>"
+        songs[i] = songs[i].toLowerCase()
+    }
+
+    lista.innerHTML = t
+
+    pesquisa.onkeyup=function(e){
+        t = this.value
+
+        r = new RegExp(t, "g")
+
+        for(i in songs){
+            if(songs[i].match(r))
+                lista.children[i].removeAttribute("style")
+            else
+            lista.children[i].style.display="none"
+        }
+    }
+</script>
