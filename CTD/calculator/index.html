@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=".css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/js/script.js" defer></script>
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <div class="display-terms" id="display-terms" placeholder="0"></div>
+        <div class="display-results" id="display-results" placeholder="0"></div>
+      </div>
+      <div class="buttons-container">
+        <div class="line1-buttons">
+          <button class="operator" id="ac" onclick="clean()">AC</button>
+          <button class="operator" id="division" onclick="insert('/')">
+            /
+          </button>
+          <button class="operator" id="multiplication" onclick="insert('*')">
+            *
+          </button>
+          <button class="operator" id="backspace" onclick="backspace()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+        </div>
+        <div class="line2-buttons">
+          <button class="number" id="seven" onclick="insert('7')">7</button>
+          <button class="number" id="eight" onclick="insert('8')">8</button>
+          <button class="number" id="nine" onclick="insert('9')">9</button>
+          <button class="operator" id="minus" onclick="insert('-')">-</button>
+        </div>
+        <div class="line3-buttons">
+          <button class="number" id="four" onclick="insert('4')">4</button>
+          <button class="number" id="five" onclick="insert('5')">5</button>
+          <button class="number" id="six" onclick="insert('6')">6</button>
+          <button class="operator" id="plus" onclick="insert('+')">+</button>
+        </div>
+        <div class="line4-buttons">
+          <button class="number" id="one" onclick="insert('1')">1</button>
+          <button class="number" id="two" onclick="insert('2')">2</button>
+          <button class="number" id="three" onclick="insert('3')">3</button>
+          <button class="ghost" id="none"></button>
+        </div>
+        <div class="equal-btn">
+          <button
+            class="equal"
+            id="equal"
+            style="height: 140px"
+            onclick="calculate()"
+          >
+            =
+          </button>
+        </div>
+        <div class="line5-buttons">
+          <button class="operator" id="percent" onclick="insert('%')">%</button>
+          <button class="number" id="zero" onclick="insert('0')">0</button>
+          <button class="operator" id="comma" onclick="insert(',')">,</button>
+          <button class="ghost" id="none"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

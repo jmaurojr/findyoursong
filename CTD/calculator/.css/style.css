@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #fff;
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 95vh;
+  width: 390px;
+  align-items: center;
+  border: 5px;
+  z-index: 1;
+
+  border-color: #726aee;
+  border-radius: 10px;
+  margin: 0 auto;
+  min-width: 390px;
+  border: 1px solid blue;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background-color: #fff;
+  height: 140px;
+  width: 350px;
+  margin-top: 180px;
+  border-radius: 10px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  box-shadow: inset 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.display-terms {
+  font-size: 40px;
+  justify-content: flex-end;
+  display: flex;
+  margin-right: -25px;
+  margin-top: -50px;
+}
+
+.display-results {
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  margin-right: 42px;
+}
+
+.buttons-container {
+  height: 480px;
+  width: 350px;
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns:
+    "operator operator operator operator"
+    "number number number operator";
+}
+
+.line1-buttons,
+.line2-buttons,
+.line3-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.line4-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 1px;
+}
+
+.line5-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: -80px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.equal {
+  display: grid;
+  margin-top: -75px;
+  margin-left: 266px;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  z-index: 2;
+  background-color: #726aee;
+  color: #fff;
+  height: 60px;
+  width: 60px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.equal:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.number {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.number:hover {
+  background-color: #726aee;
+  color: #fff;
+}
+
+.operator {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #726aee;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.operator:hover {
+  background-color: #726aee;
+  color: #fff;
+}
+
+.ghost {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+#blue-theme {
+  display: flex;
+  flex-direction: row;
+  z-index: 3;
+  position: inherit;
+  background-color: #726aee;
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  border-radius: 50%;
+  justify-content: space-around;
+}
+
+#blue-theme:hover {
+  cursor: pointer;
+}
+
+#black-theme {
+  display: flex;
+  flex-direction: row;
+  z-index: 3;
+  position: inherit;
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  margin-top: -20px;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+
+#black-theme:hover {
+  cursor: pointer;
+}
